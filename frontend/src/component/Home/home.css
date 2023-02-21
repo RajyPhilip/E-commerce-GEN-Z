@@ -1,0 +1,141 @@
+.banner{
+    background-image: url(https://www.jagranimages.com/images/newimg/26122022/26_12_2022-best_nike_shoes_in_india_23272173.jpg);
+    height: 100vmin;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    color: white;
+}
+
+.banner > h1 {
+    margin: 5vmax;
+    font:600 2.5vmax "Roboto";
+    letter-spacing: .5px;
+    width: min-content;
+}
+.banner > h2 {
+    font-family:  "Roboto";
+    letter-spacing: 1px;
+}
+.banner a{
+    text-decoration: non;
+}
+.banner a button{
+    
+    width: 100px;
+    cursor: pointer;
+    background-color: white;
+    border:1px solid white;
+    border-radius: 0;
+    padding: 1vmax;
+    transition: all 0.5s;
+    width: 15vmax;
+    font:500 1vmax "Roboto"
+}
+.banner a button:hover{
+    background-color: rgba(255,255,255,0);
+    color: white;
+}
+.banner a button span{
+    font-size: 15px;
+    font-weight: 400;
+}
+.banner a button img{
+    height: 20px;
+    width:20px
+}
+
+.banner::after{
+    content:"" ;
+    width: 100vw;
+    height: 100vmin;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    clip-path: polygon(100% 57%, 0% 100%, 100% 100%);
+    max-width: 100%;
+}
+.homeHeading{
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 1.4vmax;
+    border-bottom: 1px solid rgba(21,21,21,0.5);
+    width: 20vmax;
+    padding: 1vmax;
+    margin: 5vmax auto;
+    color:rgba(0, 0, 0, 0.808);
+}
+
+/* // products  */
+.container{
+    display: flex;
+    margin: 2vmax auto;
+    width: 80vw;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.productCard{
+    width: 18vmax;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color:rgb(48,48,48);
+    margin:2vmax;
+    transition:all 0.5s ;
+    padding-bottom: 0.5vmax;
+    justify-content: space-between;
+}
+
+.productCard > img{
+    width: 18vmax;
+}
+
+.productCard > div{
+    margin: 0.5vmax;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.productCard > div > span {
+    margin: 0.5vmax;
+    font:400 0.9vmax "Roboto";
+}
+
+.productCard > p {
+    font-family: "Roboto";
+    font-size: 2.4vmax;
+    margin: 1vmax 0.5vmax ;
+    margin-bottom: 0;
+}
+
+.productCard > span {
+    margin: 0.5vmax 0.5vmax ;
+    color:tomato;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.productCard:hover{
+    box-shadow: 0 0 5px rgba(15,15,15,0.26);
+    transform:translateY(-1vmax) ;
+}
+
+@media screen and (max-width: 600px) {
+    .productCard > p {
+        font-size: 1.7vmax;
+    }
+    .productCard > div {
+        margin: 0vmax;
+        display: block;
+    }
+    .productCard > span {
+        font-size: 1.5vmax;
+    }
+    .productCard > div > span {
+        margin:0 0.5vmax;
+        font:300 1vmax "Roboto" ;
+    }
+}
