@@ -1,9 +1,11 @@
 const app= require('./app');
-const port = 4000 ;
+const port = 8000 ;
+
 
 // dotenv for enviroment
 const dotenv = require('dotenv');
-dotenv.config({path:'Backend/config/config.env'});
+dotenv.config({path:'Backend/config/.env'});
+
 
 
 app.listen(port,(err)=>{
@@ -11,5 +13,4 @@ app.listen(port,(err)=>{
         return console.log(`Server is up and running on port ${port}`);
     }
     console.log(`Server is up and running on port ${port}`);
-
 });

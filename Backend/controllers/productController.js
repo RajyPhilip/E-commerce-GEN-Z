@@ -9,7 +9,7 @@ const cloudinary = require('cloudinary');
 
 // get all products 
 exports.getAllProducts = catchAsyncErrors( async (req,res,next)=>{
-
+    
     const resultPerPage = 8 ;
     const productsCount = await Product.countDocuments();
 
@@ -37,7 +37,7 @@ exports.AdminGetAllProducts = catchAsyncErrors( async (req,res,next)=>{
     
     res.status(200).json({
         success:true,
-        products
+        products 
     });
 });
 

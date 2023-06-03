@@ -2,6 +2,7 @@ const express= require('express');
 const app = express() ;
 const Database = require('./config/mongoose');
 const dotenv = require('dotenv');
+const path = require('path');
 
 app.use(express.json());
 
@@ -21,7 +22,7 @@ app.use(fileUpload());
 dotenv.config({path:'Backend/config/config.env'});
 
 
-//cloudinary
+//cloudinary 
 const cloudinary = require('cloudinary').v2;
 cloudinary.config({
     cloud_name: "drs05mf2a",
@@ -42,6 +43,10 @@ app.use('/api/v1',order);
 const payment = require('./routes/paymentRoute');
 app.use('/api/v1',payment);
 
+app.use(express.static(path.join(__dirname, "./client/build")));
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, "./client/build/index.html"));
+})
 
 
 //middleware for error 
