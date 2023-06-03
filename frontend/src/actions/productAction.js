@@ -17,18 +17,18 @@ import {
 //getting all product action
 export const getProduct =(keyword="",currentPage=1,price=[0,25000],category,ratings=0)=> async(dispatch)=>{
     try {
-        console.log('reached front')
+        
         dispatch({type:ALL_PRODUCT_REQUEST});
 
         let link = `/api/v1/products?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&rating[gte]=${ratings}`;
-        console.log('link',link)
+        
         if(category){
             link = `/api/v1/products?keyword=${keyword}&page=${currentPage}&price[gte]=${price[0]}&price[lte]=${price[1]}&category=${category}&ratings[gte]=${ratings}`
         console.log('categorylink',link)
         }
 
         const {data} = await axios.get(link);
-        console.log('dataaaa',data)
+        
 
         dispatch({
             type:ALL_PRODUCT_SUCCESS,
